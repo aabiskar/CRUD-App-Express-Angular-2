@@ -1,0 +1,58 @@
+
+	<!--<table>
+			<tr *ngFor="let course of courses">
+				<td>{{ course.title}}</td>
+				<td>{{ course.author}}</td>
+				<td>{{ course.price}}</td>
+				<td>{{ course.duration}}</td>
+	        </tr>
+	</table>-->
+<p>
+    <a [routerLink]="['NewCourse']" class="btn btn-primary">Add Course</a>
+</p>
+
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Course Title</th>
+        <th>Author</th>
+		<th>Category</th>
+        <th>Duration</th>
+		<th>Price</th>
+		<th>Date</th>
+			<th>Edit</th>
+		<th>Delete</th>
+		
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="success" *ngFor="let course of courses">
+        <td>{{ course.title}}</td>
+				<td>{{ course.author}}</td>
+				<td>{{ course.category}}</td>
+				<td>{{ course.duration}}</td>
+				<td>$ {{ course.price}}</td>
+				<td>{{ course.date}}</td>
+			<td>
+                <a [routerLink]="['EditCourse', { id: course._id }]">
+                    <i class="glyphicon glyphicon-edit"></i>
+                </a>
+			</td>
+		  <td>
+							
+                <i (click)="deleteCourse(course)" class="glyphicon glyphicon-remove clickable"></i>
+            </td> 
+				
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+    
+
+		

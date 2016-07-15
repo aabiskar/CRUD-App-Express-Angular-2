@@ -1,0 +1,53 @@
+<!--<p>
+  courses-form works!
+</p>-->
+
+<!--<h1>{{ title }}</h1>-->
+<!--<h2>{{id}}</h2>-->
+
+<re>{{ course | json }}</re>
+    <div class="col-md-6 well">
+        <form (ngSubmit)="save()">
+            <fieldset>
+                <legend>
+                   Course
+                </legend>
+                <div class="form-group">
+                    <label>Course Title</label>
+                    <input [(ngModel)]="course.title"   type="text" class="form-control">
+                    </div>
+               
+                <div class="form-group">
+                    <label>Author</label>
+                    <input [(ngModel)]="course.author"   type="text" class="form-control">
+                    </div>
+            
+                <div class="form-group">
+                    <label>Category</label>
+                    <input [(ngModel)]="course.category"  type="text" class="form-control">
+                </div>
+            
+            
+              
+                    <div class="form-group">
+                        <label>Duration</label>
+                        <input [(ngModel)]="course.duration"  type="text" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Price</label>
+                        <input [(ngModel)]="course.price" type="text" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Date</label>
+                        <input [(ngModel)]="course.date"  type="date" class="form-control">
+                    </div>
+                    
+           
+            <button type="submit"   class="btn btn-primary">
+                Save
+            </button>
+            </fieldset>
+        </form>
+    </div>
